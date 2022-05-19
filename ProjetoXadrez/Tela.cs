@@ -14,11 +14,23 @@ namespace ProjetoXadrez
             imprimirPecasCapturas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.Turno);
-            Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
-            if (partida.Xeque)
+
+            if (!partida.Terminada)
             {
-                Console.WriteLine("VOCE ESTA EM XEQUE!");
+                Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+                if (partida.Xeque)
+                {
+                    Console.WriteLine("VOCE ESTA EM XEQUE!");
+                }
             }
+            else
+            {
+                Console.WriteLine("XEQUEMATE!!!");
+                Console.WriteLine("Vencedor: " + partida.JogadorAtual);
+                Console.ReadLine();
+            }
+
+            
         }
 
         public static void imprimirPecasCapturas(PartidaXadrez partida)

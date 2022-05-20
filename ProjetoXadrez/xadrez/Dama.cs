@@ -30,7 +30,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.Linha = pos.Linha - 1;
+                pos.definirValores(pos.Linha -1, pos.Coluna);
             }
             //abaixo
             pos.definirValores(Posicao.Linha + 1, Posicao.Coluna);
@@ -41,7 +41,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.Linha = pos.Linha + 1;
+                pos.definirValores(pos.Linha + 1, pos.Coluna);
             }
             //direita
             pos.definirValores(Posicao.Linha, Posicao.Coluna + 1);
@@ -52,7 +52,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.Coluna = pos.Coluna + 1;
+                pos.definirValores(pos.Linha, pos.Coluna + 1);
             }
             //esquerda
             pos.definirValores(Posicao.Linha, Posicao.Coluna - 1);
@@ -63,7 +63,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.Coluna = pos.Coluna - 1;
+                pos.definirValores(pos.Linha, pos.Coluna - 1);
             }
             //noroeste
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
@@ -96,7 +96,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
+                pos.definirValores(pos.Linha + 1, pos.Coluna + 1);
             }
             //sudoeste
             pos.definirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
@@ -107,7 +107,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.definirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
+                pos.definirValores(pos.Linha + 1, pos.Coluna - 1);
             }
 
             return mat;
